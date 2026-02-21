@@ -13,7 +13,7 @@ const pin = pinInput.value;
 if(contactNumber == '01881090679' && pin == '1234'){
     //3.1 true >> alert > homepage
     alert('Login Success');
-    window.location.assign('/home.html');
+    window.location.assign('home.html');
 }
 
 //3.2 false >> alert > return
