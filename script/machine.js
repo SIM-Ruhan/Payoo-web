@@ -20,10 +20,16 @@ function showOnly(id){
     const addmoney = document.getElementById('add-money');
     const cashout = document.getElementById('cashout');
     const history = document.getElementById('history');
+    const moneyTrans = document.getElementById('money-transfer');
+    const getBonus = document.getElementById('get-bonus');
+    const payBill = document.getElementById('paybill');
 
     addmoney.classList.add('hidden');
     cashout.classList.add('hidden');
     history.classList.add('hidden');
+    moneyTrans.classList.add('hidden');
+    getBonus.classList.add('hidden');
+    payBill.classList.add('hidden');
 
    const selected = document.getElementById(id);
    selected.classList.remove('hidden');

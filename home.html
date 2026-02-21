@@ -49,27 +49,27 @@
 <p class="text-[#08080860]">Enjoy easy and convenient financial services with us. Cashout charge is very low</p>  
 
 <div class="buttons grid grid-cols-3 gap-3">
-    <button class="btn btn-secondary flex-col h-full py-4 btn-soft" onclick="showOnly('add-money')">
+    <button class="btn flex-col h-full py-4 btn-soft" onclick="showOnly('add-money')">
         <img src="./assets/opt-1.png" alt="">
         <p>Add Money</p>
     </button>
-    <button class="btn btn-secondary flex-col h-full py-4 btn-soft" onclick="showOnly('cashout')">
+    <button class="btn flex-col h-full py-4 btn-soft" onclick="showOnly('cashout')">
         <img src="./assets/opt-2.png" alt="">
         <p>Cashout</p>
     </button>
-    <button class="btn btn-secondary flex-col h-full py-4 btn-soft text-[13px]">
+    <button class="btn flex-col h-full py-4 btn-soft" onclick="showOnly('money-transfer')">
         <img src="./assets/opt-3.png" alt="">
         <p>Money Transfer</p>
     </button>
-    <button class="btn btn-secondary flex-col h-full py-4 btn-soft">
+    <button class="btn flex-col h-full py-4 btn-soft" onclick="showOnly('get-bonus')">
         <img src="./assets/opt-4.png" alt="">
         <p>Get Bonus</p>
     </button>
-    <button class="btn btn-secondary flex-col h-full py-4 btn-soft">
+    <button class="btn flex-col h-full py-4 btn-soft" onclick="showOnly('paybill')">
         <img src="./assets/opt-5.png" alt="">
         <p>Pay Bill</p>
     </button>
-    <button onclick="showOnly('history')" class="btn btn-secondary flex-col h-full py-4 btn-soft">
+    <button onclick="showOnly('history')" class="btn flex-col h-full py-4 btn-soft">
         <img src="./assets/opt-6.png" alt="">
         <p>Transactions</p>
     </button>
@@ -129,6 +129,69 @@
 
 </section>
 
+
+<!-- Transfer money -->
+ <section id="money-transfer" class="w-11/12 mx-auto py-5 hidden">
+<h2 class="text-xl font-bold">Transfer Money</h2>
+<div class="form pt-2 flex flex-col items-center">
+    <div class="card bg-base-100 w-full shadow-xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label text-[#080808] font-medium mb-1">User Account Number</label>
+          <input id="money-transfer-number" type="number" maxlength="11" minlength="11" class="input p-5 rounded-4xl bg-[#F4F5F7] mb-2 w-full" placeholder="Enter 11 digit agent number" />
+          <label class="label text-[#080808] font-medium mb-1">Amount</label>
+          <input id="money-transfer-amount" type="number" maxlength="4" class="input p-5 rounded-4xl bg-[#F4F5F7] mb-1 w-full" placeholder="Enter amount to transfer" />
+          <label class="label text-[#080808] font-medium mb-1">Pin Number</label>
+          <input id="money-transfer-pin" type="number" maxlength="4" class="input p-5 rounded-4xl bg-[#F4F5F7] mb-1 w-full" placeholder="Enter 4 Digit Pin" />
+        
+          <button id="money-transfer-btn" class="btn bg-[#3B25C1] mt-4 text-white rounded-4xl text-xl font-semibold py-5">Send Now</button>
+        </fieldset>
+      </div>
+    </div>
+</div>
+
+</section>
+
+<!-- Get Bonus -->
+
+<section id="get-bonus" class="w-11/12 mx-auto py-5 hidden">
+<h2 class="text-xl font-bold">Get Bonus</h2>
+<div class="bg-base-100 p-5 rounded-xl">
+    <h3 class="font-semibold">Currently <span class="text-red-600"> NO </span> Bonus Available</h3>
+</div>
+
+</section>
+
+<!-- Pay Bill -->
+ <section id="paybill" class="w-11/12 mx-auto py-5 hidden">
+<h2 class="text-xl font-bold">Pay Bill</h2>
+<div class="form pt-2 flex flex-col items-center">
+    <div class="card bg-base-100 w-full shadow-xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+<label class="label text-[#080808] font-medium mb-1">Select to Pay</label>
+
+            <select class="select w-full bg-[#F4F5F7] rounded-full mb-1" id="paybill-bank">
+  <option disabled selected>Select Bank</option>
+  <option value="DBBL">DBBL</option>
+  <option value="IFIC">IFIC</option>
+  <option value="City Bank">City Bank</option>
+</select>
+          <label class="label text-[#080808] font-medium mb-1">Biller Account  Number</label>
+          <input id="paybill-number" type="number" maxlength="11" minlength="11" class="input p-5 rounded-4xl bg-[#F4F5F7] mb-2 w-full" placeholder="Enter biller account number" />
+          <label class="label text-[#080808] font-medium mb-1">Amount to pay</label>
+          <input id="paybill-amount" type="number" maxlength="4" class="input p-5 rounded-4xl bg-[#F4F5F7] mb-1 w-full" placeholder="Enter amount to pay" />
+          <label class="label text-[#080808] font-medium mb-1">Pin Number</label>
+          <input id="paybill-pin" type="number" maxlength="4" class="input p-5 rounded-4xl bg-[#F4F5F7] mb-1 w-full" placeholder="Enter 4 Digit Pin" />
+        
+          <button id="paybill-btn" class="btn bg-[#3B25C1] mt-4 text-white rounded-4xl text-xl font-semibold py-5">Pay Now</button>
+        </fieldset>
+      </div>
+    </div>
+</div>
+
+</section>
+
 <!-- Transaction History -->
 
 <section id="history" class="w-11/12 mx-auto py-5 hidden">
@@ -141,6 +204,8 @@
 <script src="./script/machine.js"></script>
 <script src="./script/addmoney.js"></script>
 <script src="./script/cashout.js"></script>
+<script src="./script/moneyTransfer.js"></script>
+<script src="./script/paybill.js"></script>
 
 
 </body>
